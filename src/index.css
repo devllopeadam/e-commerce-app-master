@@ -5,12 +5,27 @@
 
 body {
   font-family: "Manrope", sans-serif;
-  min-height: 500vh;
 }
 
 
 @layer components {
   .container {
     @apply w-full max-w-[1150px] max-xl:px-14 max-lg:px-6 max-md:px-5 mx-auto;
+  }
+}
+
+
+.hero {
+  background-repeat: no-repeat;
+  background-image: url("./assets/images/hero.jpg");
+  background-position: 50% 50%;
+}
+
+
+@media (max-width: 992px) {
+  .hero {
+    background-image: url("./assets/images/hero-mobile.jpg");
+    background-size: 100%;
+    background-position: center center;
   }
 }
