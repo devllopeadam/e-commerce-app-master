@@ -20,7 +20,7 @@ const Hero = () => {
         whileInView={"animate"}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="container h-screen max-md:pt-[50px] md:h-[80vh] max-lg:flex-col flex text-white items-center justify-start">
+        className="container h-[80vh] max-md:pt-[50px] sm:h-[80vh] max-lg:flex-col flex text-white items-center justify-start">
         <div className="flex flex-col gap-5 max-lg:items-center max-lg:justify-center max-w-[370px] max-lg:text-center`">
           <p className="text-[14px] text-[#fafafa80] tracking-[.625rem] uppercase">
             NEW PRODUCT
@@ -33,7 +33,7 @@ const Hero = () => {
             made for the passionate music enthusiast.
           </p>
           <Button
-            href={"/headphones/xx99-two-headphone"}
+            href={"/headphones/xx99-mark-II-headphone"}
             text={"see product"}
             bgColor={"bg-accent-orange"}
             bgHoverColor={"bg-accent-orange-hover"}

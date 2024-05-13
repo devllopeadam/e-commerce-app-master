@@ -1,9 +1,26 @@
+import { motion } from "framer-motion";
 import { Button } from "../components";
 
 /* eslint-disable react/prop-types */
 const AlsoLike = ({ array }) => {
+  const variants = {
+    animate: {
+      opacity: 1,
+      y: 0,
+    },
+    hidden: {
+      opacity: 0,
+      y: 50,
+    },
+  };
   return (
-    <div className="container mt-5 flex flex-col gap-10 items-center">
+    <motion.div
+      variants={variants}
+      initial="hidden"
+      whileInView={"animate"}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: 0.3 }}
+      className="container mt-5 flex flex-col gap-10 items-center">
       <h1 className="text-[32px] font-bold">YOU MAY ALSO LIKE</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-[auto] gap-10">
         {array.slice(0, 3).map((product) => {
@@ -33,7 +50,7 @@ const AlsoLike = ({ array }) => {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

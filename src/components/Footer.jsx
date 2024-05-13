@@ -37,7 +37,7 @@ const Footer = () => {
                 <Link
                   to={link.href}
                   key={link.label + "_header_desktop"}
-                  className={`text-[13.5px] uppercase font-bold tracking-tight text-white hover:text-accent-orange transition-colors duration-300`}>
+                  className={`text-[15px] sm:text-[13.5px] uppercase font-bold tracking-tight text-white hover:text-accent-orange transition-colors duration-300`}>
                   {link.label}
                 </Link>
               );

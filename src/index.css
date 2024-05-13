@@ -5,6 +5,21 @@
 
 body {
   font-family: "Manrope", sans-serif;
+  position: relative;
+  height: 100%;
+}
+
+body.backdrop {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    backdrop-filter: blur(2px);
+    transition: .3s all linear;
+  }
 }
 
 
@@ -28,4 +43,25 @@ body {
     background-size: 100%;
     background-position: center center;
   }
+}
+
+
+/* make a good scroll to the orders section */
+
+.orders::-webkit-scrollbar {
+  width: 3px;
+}
+
+.orders {
+  scroll-behavior: smooth;
+}
+
+.orders::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.orders::-webkit-scrollbar-thumb {
+  background: #e4e4e4;
+  border-radius: 10px;
 }

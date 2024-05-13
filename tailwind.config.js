@@ -20,6 +20,9 @@ export default {
       },
       borderRadius: {
         "radius": "0.5rem"
+      },
+      boxShadow: {
+        "input": "rgb(216, 125, 74) 0px 0px 0px 1px"
       }
     },
   },

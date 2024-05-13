@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Button, QuantityFixed } from "../components";
+import { QuantityFixed } from "../components";
+import { useOrders } from "../context/OrdersContext";
 
 const ProductAdd = ({
   name,
@@ -12,8 +13,12 @@ const ProductAdd = ({
   inTheBox,
   features,
   images,
+  imageOrder,
+  textLike,
+  priceNumber,
 }) => {
   const [quantity, setQuantity] = useState(1);
+  const { orders, setOrders } = useOrders();
   const variants = {
     animate: {
       opacity: 1,
@@ -24,8 +29,35 @@ const ProductAdd = ({
       y: 50,
     },
   };
+
+  const hanldeAddOrder = () => {
+    setQuantity(1);
+    if (orders.find((order) => order.textLike === textLike)) {
+      const newOrders = orders.map((order) => {
+        if (order.textLike === textLike) {
+          return {
+            ...order,
+            quantity: order.quantity + quantity,
+          };
+        }
+        return order;
+      });
+      setOrders(newOrders);
+    } else {
+      setOrders([
+        ...orders,
+        {
+          textLike,
+          imageOrder: imageOrder,
+          priceNumber,
+          quantity,
+        },
+      ]);
+    }
+  };
+
   return (
-    <div className="flex flex-col gap-28">
+    <div className="flex flex-col gap-24">
       <motion.div
         variants={variants}
         initial="hidden"
@@ -33,7 +65,7 @@ const ProductAdd = ({
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.3 }}
         key={name + "_single_product"}
-        className="flex gap-10 items-center justify-between max-md:flex-col">
+        className="flex gap-9 items-center justify-between max-md:flex-col">
         <img
           src={image}
           className="rounded-radius w-[540px]"
@@ -55,17 +87,11 @@ const ProductAdd = ({
               quantity={quantity}
               setQuantity={setQuantity}
             />
-            <Button
-              href={""}
-              text={"add to cart"}
-              bgColor={"bg-accent-orange"}
-              bgHoverColor={"bg-accent-orange-hover"}
-              borderColor={"border-accent-orange"}
-              textColor={"text-white"}
-              className={
-                "py-[13.5px] hover:bg-accent-orange-hover hover:border-accent-orange-hover"
-              }
-            />
+            <button
+              onClick={hanldeAddOrder}
+              className={`py-[13.5px] hover:bg-accent-orange-hover hover:border-accent-orange-hover text-[13px] font-bold w-fit transition-all duration-300 text-white bg-accent-orange border border-accent-orange uppercase px-[30px]`}>
+              add to cart
+            </button>
           </div>
         </div>
       </motion.div>

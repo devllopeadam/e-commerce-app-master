@@ -11,6 +11,7 @@ import Facebook from "./icons/facebook.svg";
 import Twitter from "./icons/twitter.svg";
 import Instagram from "./icons/instagram.svg";
 import ArrowRight from "./icons/arrow-right.svg";
+import Check from "./icons/check.svg";
 
 // Images
 
@@ -88,6 +89,7 @@ export {
   Menu,
   Close,
   Cart,
+  Check,
   CashOnDelivery,
   Headphones,
   Speakers,
@@ -125,7 +127,6 @@ export {
   zx9Galery1,
   zx9Galery2,
   zx9Galery3,
-
   xx59Like,
   xx99ILike,
   xx99IILike,

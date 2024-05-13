@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import {
+  Checkout,
   Earphones,
   Headphones,
   Home,
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         path: "/earphones/:name",
         element: <Product />,
         loader: productLoader,
+      },
+      {
+        path: "/checkout",
+        element: <Checkout />,
       },
     ],
   },

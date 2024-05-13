@@ -11,9 +11,13 @@ const useOrderQuantities = () => useContext(OrderQuantitiesContext);
 const OrderQuantitiesProvider = ({ children }) => {
   const [orderQuantities, setOrderQuantities] = useState(0);
   const { orders } = useOrders();
-  const extractQuantities = () =>
-    orders.map((order) => setOrderQuantities((prev) => prev + order.quantity));
-
+  const extractQuantities = () => {
+    let totalQuantities = 0;
+    orders.forEach((order) => {
+      totalQuantities += order.quantity;
+    });
+    setOrderQuantities(totalQuantities);
+  };
   useEffect(() => {
     extractQuantities();
   }, [orders]);

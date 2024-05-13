@@ -11,6 +11,12 @@ import ProductsDisplay from "./ProductsDisplay.jsx";
 import ProductAdd from "./ProductAdd.jsx";
 import AlsoLike from "./AlsoLike.jsx";
 import QuantityFixed from "./QuantityFixed.jsx";
+import OrderItem from "./OrderItem.jsx";
+import GoBack from "./GoBack.jsx";
+import Summary from "./Summary.jsx";
+import CheckoutPayment from "./CheckoutPayment.jsx";
+import InputField from "./InputField.jsx";
+import Tanks from "./Tanks.jsx";
 
 export {
   Footer,
@@ -26,4 +32,10 @@ export {
   ProductAdd,
   AlsoLike,
   QuantityFixed,
+  OrderItem,
+  GoBack,
+  Summary,
+  CheckoutPayment,
+  InputField,
+  Tanks,
 };

@@ -73,6 +73,7 @@ const products = [
     description: "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
     isNew: true,
     price: "$ 2,999",
+    priceNumber: 2999,
     inTheBox: [
       { mount: "1x", property: "Headphone Unit" },
       { mount: "2x", property: "Replacement Earcups" },
@@ -100,6 +101,7 @@ const products = [
     description: "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
     isNew: false,
     price: "$ 1,750",
+    priceNumber: 1750,
     inTheBox: [
       { mount: "1x", property: "Headphone Unit" },
       { mount: "2x", property: "Replacement Earcups" },
@@ -126,6 +128,7 @@ const products = [
     description: "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
     isNew: false,
     price: "$ 899",
+    priceNumber: 899,
     inTheBox: [
       { mount: "1x", property: "Headphone Unit" },
       { mount: "2x", property: "Replacement Earcups" },
@@ -153,6 +156,7 @@ const products = [
     description: "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
     isNew: true,
     price: "$ 4,500",
+    priceNumber: 4500,
     inTheBox: [
       { mount: "2x", property: "Speaker Unit" },
       { mount: "2x", property: "Speaker Cloth Panel" },
@@ -180,6 +184,7 @@ const products = [
     description: "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
     isNew: false,
     price: "$ 3,500",
+    priceNumber: 3500,
     inTheBox: [
       { mount: "2x", property: "Speaker Unit" },
       { mount: "2x", property: "Speaker Cloth Panel" },
@@ -208,6 +213,7 @@ const products = [
     description: "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
     isNew: true,
     price: "$ 599",
+    priceNumber: 599,
     inTheBox: [
       { mount: "2x", property: "Earphone Unit" },
       { mount: "6x", property: "Multi- Size Earplugs" },

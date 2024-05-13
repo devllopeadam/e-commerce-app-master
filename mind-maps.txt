@@ -8,4 +8,4 @@
 how to handle the orders on the cart
 
 matalan => 
-{orderId, orderName, orderImage, orderQuantity, orderPrice}
+{orderName, orderImage, orderQuantity, orderPrice}
