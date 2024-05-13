@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-
 import { motion } from "framer-motion";
 import { useTotalPrice } from "../context/TotalPriceContext";
 import { Button, Tanks } from "../components";
@@ -70,7 +69,6 @@ const Summary = ({ orders }) => {
           }
           newErrors[key] = error;
         });
-      console.log(isValid);
     } else {
       Object.keys(data).forEach((key) => {
         let error = "";

@@ -4,7 +4,7 @@ import { useOrders } from "../context/OrdersContext";
 import { CheckoutPayment, GoBack, Summary } from "../components";
 
 const Checkout = () => {
-  const { orders, setOrders } = useOrders();
+  const { orders } = useOrders();
 
   return (
     <div className="py-24 pb-44 pt-40 bg-[#fafafa]">

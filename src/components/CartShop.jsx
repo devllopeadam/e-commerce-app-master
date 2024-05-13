@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useOrders } from "../context/OrdersContext";
 import { EmptyCart } from "../assets";
 import { useOrderQuantities } from "../context/OrderQuantitiesContext";
